@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<!-- Based on Launch: https://github.com/haothitran/launch -->
+
+  <head>
+    <!-- document metadata -->
+    <meta charset="UTF-8">
+
+    <!-- site metadata -->
+    <title>Help</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  </head>
+
+  <body>
+    <div id="container">
+
+      <div id="searchbox">
+        <!-- kobra@firefox $ search -->
+        <h3><span class="red">kobra</span>@<span class="violet">firefox</span> <span class="blue">$</span> <span class="orange">search</span></h3>
+        <!-- search -->
+        <input type="text" id="search" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="autofocus" spellcheck="false" placeholder="" onkeypress="searchKeyPress(event)"></input>
+      </div> <!-- end searchbox -->
+
+      <div id="links">
+
+        <div class="boxmanpageleft">
+
+          <!-- kobra@firefox $ search -->
+          <h3><span class="blue">$</span> <span class="orange">cd</span> <span class="green">~/general</span> && <span class="orange">man</span> <span class="magenta">search</span></h3>
+          <!-- search -->
+
+          <div class="divTable">
+              <div class="divTableBody">
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">google</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">shortcut to google.ca</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">google -s</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">search google for keyword</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">drive</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">shortcut to google drive</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">twt</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">shortcut to twitter</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">twt -u</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">go to twitter user</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">twt -s</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">search twitter for keyword</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">youtube</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">shortcut to youtube</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">youtube -s</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">search youtube for video</span></div>
+                  </div>
+              </div>
+          </div>
+
+        </div>
+        <div class="boxmanpageright">
+
+          <!-- kobra@firefox $ search -->
+          <h3><span class="blue">$</span> <span class="orange">cd</span> <span class="green">~/reddit</span> && <span class="orange">man</span> <span class="magenta">search</span></h3>
+          <!-- search -->
+
+          <div class="divTable">
+              <div class="divTableBody">
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">reddit</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">shortcut to reddit</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">reddit -r</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">go to subreddit</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">reddit -u</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">go to reddit user</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">reddit br</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">/r/brantford</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">reddit ca</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">/r/canada</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">reddit mk</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">/r/mechanicalkeyboards</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">reddit ts</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">/r/trucksim</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">reddit sc</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">/r/squaredcircle</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">reddit up</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">/r/unixporn</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">reddit lmr</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">/r/linuxmasterrace</span></div>
+                  </div>
+                  <div class="divTableRow">
+                      <div class="divTableCellLeft"><span class="divTitle">reddit an</span></div>
+                      <div class="divTableCellRight"><span class="divDescription">/r/android</span></div>
+                  </div>
+              </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div> <!-- end container -->
+
+    <!-- commands script -->
+    <script type="text/javascript" src="assets/search.js"></script>
+
+  </body>
+
+</html>
