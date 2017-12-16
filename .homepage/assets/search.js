@@ -50,7 +50,7 @@ function parseCom(com) {
   else if (com.startsWith("help")==true) {
     // if "help" command is matched, open manpage
     if (/^help$/i.test(com)) {
-      nav("http://localhost/homepage/manpage.html");
+      nav("http://localhost/manpage.html");
     }
     // if anything else, search for it
     else if (urlPattern.test(com)){
@@ -64,7 +64,7 @@ function parseCom(com) {
   else if (com.startsWith("man")==true) {
     // if "man" command is matched, open manpage
     if (/^man$/i.test(com)) {
-      nav("http://localhost/homepage/manpage.html");
+      nav("http://localhost/manpage.html");
     }
     // if anything else, search for it
     else if (urlPattern.test(com)){
