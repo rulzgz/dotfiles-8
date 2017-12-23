@@ -35,12 +35,6 @@ green = #50FA7B
 yellow = #F1FA8C
 orange = #FF9F55
 
-; Coloured Powerline glyphs couldn't be defined as variables
-; without resorting to environment variables, and I figured
-; it would be more work to edit another file rather than just
-; scroll down and set the colours here. Sorry. See more here:
-; https://github.com/jaagr/polybar/issues/615
-
 
 [bar/kobra]
 font-0 = Wuncon Siji:pixelsize=10;2
@@ -129,7 +123,9 @@ label-mode-foreground = ${colors.background}
 
 [module/powerline-suffix]
 type = custom/text
-content = %{T4}%{F#1e1f26}%{B#282a36}%{T-}%{F#282a36}||%{F-}
+content = "%{T4} %{T-}"
+content-foreground = ${colors.dark} 
+content-background = ${colors.background}
 
 
 [module/xwindow]
@@ -262,7 +258,9 @@ label-padding   =  3
 
 [module/powerline-prefix]
 type = custom/text
-content = %{T4}%{F#1e1f26}%{B#282a36}%{T-}
+content = "%{T4}%{T-}"
+content-foreground = ${colors.dark}
+content-background = ${colors.background}
 
 
 [module/rofi]
