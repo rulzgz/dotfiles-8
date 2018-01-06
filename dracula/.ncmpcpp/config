@@ -1,0 +1,28 @@
+mpd_port = "6642"
+
+user_interface = "alternative"
+
+visualizer_output_name = "fifo_vis"
+visualizer_in_stereo = "yes"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_sync_interval = "30"
+visualizer_type = "spectrum" (spectrum/wave)
+visualizer_look = "●▋"
+
+colors_enabled = yes
+empty_tag_color = cyan
+header_window_color = magenta
+volume_color = cyan
+state_line_color = magenta
+state_flags_color = magenta
+main_window_color = blue
+color1 = magenta
+color2 = cyan
+progressbar_color = cyan
+progressbar_elapsed_color = cyan
+statusbar_color = magenta
+statusbar_time_color = magenta
+player_state_color = blue
+alternative_ui_separator_color = blue
+window_border_color = blue
+active_window_border = blue

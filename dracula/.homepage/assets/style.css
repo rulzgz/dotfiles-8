@@ -1,0 +1,219 @@
+/* -------------------------------------------------------------------
+  RESETS
+---------------------------------------------------------------------- */
+
+html, body, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------------------------------------------------
+  BASE
+---------------------------------------------------------------------- */
+
+body {
+  background-color: #282a36;
+  color: #f8f8f2;
+  font-family: "Inconsolata", monospace;
+  font-size: 15px;
+}
+
+h3 {
+  display: inline;
+  padding-bottom: 5px;
+  font-size: 1em;
+}
+
+a, a:visited {
+  display: block;
+  padding-top: 2px;
+  color: #ff79c6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8be9fd;
+}
+
+/* -------------------------------------------------------------------
+  COLOURS
+---------------------------------------------------------------------- */
+
+.blue {
+  color: #6272a4;
+}
+
+.cyan {
+  color: #8be9fd;
+}
+
+.green {
+  color: #50fa7b;
+}
+
+.orange {
+  color: #ffb86c;
+}
+
+.magenta {
+  color: #ff79c6;
+}
+
+.violet {
+  color: #bd93f9;
+}
+
+.red {
+  color: #ff5555;
+}
+
+.yellow {
+  color: #f1fa8c;
+}
+
+/* -------------------------------------------------------------------
+  LAYOUT
+---------------------------------------------------------------------- */
+
+#container {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 700px;
+  height: auto;
+}
+
+#searchbox {
+  margin: 4px;
+  padding: 8px;
+  background-color: #282a36;
+  border: 5px solid #282a36;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+     -moz-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+          box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+}
+
+#links {
+  display: -moz-box;
+  display: -webkit-box;
+  width: 100%;
+}
+
+.boxedge {
+  width: 180px;
+  margin: 4px;
+  padding: 8px;
+  background-color: #282a36;
+  border: 5px solid #282a36;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+     -moz-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+          box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+}
+
+.boxmiddle {
+  width: 238px;
+  margin: 4px;
+  padding: 8px;
+  background-color: #282a36;
+  border: 5px solid #282a36;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+     -moz-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+          box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+}
+
+.boxmanpageleft {
+  width: 350px;
+  margin: 4px;
+  padding: 8px;
+  background-color: #282a36;
+  border: 5px solid #282a36;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+     -moz-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+          box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+}
+
+.boxmanpageright {
+  width: 282px;
+  margin: 4px;
+  padding: 8px;
+  background-color: #282a36;
+  border: 5px solid #282a36;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+     -moz-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+          box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.35);
+}
+
+.newrow {
+  margin: 8px;
+}
+
+/* -------------------------------------------------------------------
+  MANPAGE TABLE
+---------------------------------------------------------------------- */
+
+div.divTable {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.divTable .divTableCell {
+  border: 0px solid #000;
+}
+
+.divTable {
+  display: table;
+}
+
+.divTableRow {
+  display: table-row;
+}
+
+.divTableCellLeft {
+  display: table-cell;
+  padding: 1px;
+  width: 35%;
+}
+
+.divTableCellRight {
+  display: table-cell;
+  padding: 1px;
+  width: 65%;
+}
+
+.divTableBody {
+  display: table-row-group;
+}
+
+.divTitle {
+  font-weight: bold;
+  text-decoration: none;
+  color: #8be9fd;
+}
+
+.divDescription {
+  text-decoration: none;
+  color: #f8f8f2;
+}
+
+/* -------------------------------------------------------------------
+  SEARCH
+---------------------------------------------------------------------- */
+
+form {
+  display: inline;
+}
+
+input {
+  display: inline;
+  width: 68%;
+  background: none;
+  border: none;
+  color: #8be9fd;
+  font-size: 1em;
+  font-weight: bold;
+}

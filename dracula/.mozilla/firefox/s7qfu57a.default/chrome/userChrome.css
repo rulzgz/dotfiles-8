@@ -1,0 +1,46 @@
+/****** NAVBAR COLOUR CHANGE ** BEGIN ******/
+
+#nav-bar, .tab-background[selected="true"] {
+  background: #282a36 !important;
+}
+
+#main-window #urlbar {
+  background: #1e1f26 !important;
+}
+
+/****** NAVBAR COLOUR CHANGE ** END ******/
+
+/****** TAB CENTER REDUX ** BEGIN ******/
+
+#tabbrowser-tabs {
+  visibility: collapse !important;
+}
+
+#sidebar-box {
+  overflow: hidden;
+  min-width: 0px;
+  max-width: 0px;
+  position: fixed;
+  border-right: 1px solid rgba(0,0,0,0);
+  transition: all 0.25s ease;
+  z-index: 2;
+}
+
+#sidebar-box:hover, #sidebar-box #sidebar {
+  min-width: 400px !important;
+  max-width: 400px !important;
+}
+
+#sidebar-box #sidebar-header, #sidebar-box ~ #sidebar-splitter {
+  display: none;
+}
+
+#sidebar-box #sidebar {
+  height: 100vh;
+}
+
+#urlbar {
+  border-radius: 0px !important;
+}
+
+/****** TAB CENTER REDUX ** END ******/
