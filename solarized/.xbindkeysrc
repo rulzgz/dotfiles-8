@@ -1,0 +1,179 @@
+#
+#  ██╗  ██╗██████╗ ██╗███╗   ██╗██████╗ ██╗  ██╗███████╗██╗   ██╗███████╗
+#  ╚██╗██╔╝██╔══██╗██║████╗  ██║██╔══██╗██║ ██╔╝██╔════╝╚██╗ ██╔╝██╔════╝
+#   ╚███╔╝ ██████╔╝██║██╔██╗ ██║██║  ██║█████╔╝ █████╗   ╚████╔╝ ███████╗
+#   ██╔██╗ ██╔══██╗██║██║╚██╗██║██║  ██║██╔═██╗ ██╔══╝    ╚██╔╝  ╚════██║
+#  ██╔╝ ██╗██████╔╝██║██║ ╚████║██████╔╝██║  ██╗███████╗   ██║   ███████║
+#  ╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝
+#
+#  KingKobra87's xbindkeys config
+#  https://www.github.com/kingkobra87/dotfiles
+#
+#  Most of these keybindings used to be a part of my i3 config, but I wanted
+#  something portable for use in other window managers and desktop environments.
+#  i3 specific keybinds still exist in ~/.i3/config but everything here should
+#  be compatible with just about any other wm/de. Just be sure to disable any
+#  conflicting keybinds (such as the menus in XFCE, for example)
+#
+
+#############################
+###### MULTIMEDIA KEYS ######
+#############################
+
+# Increase volume
+"~/.i3/scripts/volume.sh up"
+    XF86AudioRaiseVolume
+"~/.i3/scripts/volume.sh up"
+    m:0x10 + c:225
+
+# Decrease volume
+"~/.i3/scripts/volume.sh down"
+    XF86AudioLowerVolume
+"~/.i3/scripts/volume.sh down"
+    m:0x10 + c:180
+
+# Toggle mute
+"~/.i3/scripts/volume.sh mute"
+    XF86AudioMute
+"~/.i3/scripts/volume.sh mute"
+    m:0x10 + c:163
+
+# Play/Pause
+"playerctl play-pause"
+    XF86AudioPlay
+
+# Next song
+"playerctl next"
+    XF86AudioNext
+
+# Previous song
+"playerctl previous"
+    XF86AudioPrev
+
+# Increase brightness
+"light -A 5"
+    XF86MonBrightnessUp
+"light -A 10"
+    Control+Shift + equal
+
+# Decrease brightness
+"light -U 5"
+    XF86MonBrightnessDown
+"light -U 10"
+    Control+Shift + minus
+
+
+########################
+###### ROFI MENUS ######
+########################
+
+#### commented lines for centering with padding when fullscreen >> uncomment related lines in rofi config
+
+#### "rofi -show run -padding $(($(xwininfo -root |awk '/Height/ { print $2}')/3))"
+"rofi -show run -hide-scrollbar"
+    Alt + r
+
+#### "i3-dmenu-desktop --dmenu="rofi -dmenu -i -padding $(($(xwininfo -root |awk '/Height/ { print $2}')/3))""
+"i3-dmenu-desktop --dmenu="rofi -dmenu -i -hide-scrollbar""
+    Alt + d
+
+"~/.i3/scripts/logout.sh"
+    Mod4 + Escape
+
+# Clipboard manager
+#### "rofi -modi "clipboard:/usr/bin/greenclip print" -show clipboard -padding $(($(xwininfo -root |awk '/Height/ { print $2}')/3))"
+"rofi -modi "clipboard:/usr/bin/greenclip print" -show clipboard -width 75 -hide-scrollbar"
+    Alt + v
+
+# Window switcher
+#### "rofi -show window -padding $(($(xwininfo -root |awk '/Height/ { print $2}')/3))"
+"rofi -show window -width 50 -hide-scrollbar"
+    Alt + Tab
+
+
+###################################
+###### APPLICATION LAUNCHING ######
+###################################
+
+# Steam launcher (not active)
+#"DRI_PRIME=1 WINEPREFIX=~/.wine WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &"
+
+"GTK2_RC_FILES=/usr/share/themes/Clearlooks/gtk-2.0/gtkrc audacity"
+    Control+Mod4 + a
+
+"GTK2_RC_FILES=/usr/share/themes/Clearlooks/gtk-2.0/gtkrc FreeFileSync"
+    Control+Mod4 + b
+
+"deluge"
+    Control+Mod4 + d
+
+"firefox"
+    Control+Mod4 + f
+
+"gimp"
+    Control+Mod4 + g
+
+"yakyak"
+    Control+Mod4 + h
+
+"discord"
+    Control+Mod4 + i
+
+"kodi"
+    Control+Mod4 + k
+
+"xfce4-terminal -T alsamixer -e 'alsamixer'"
+    Control+Mod4 + m
+
+"timidity -iA && sleep 1 && dosbox"
+    Control+Mod4 + n
+
+"pcmanfm"
+    Control+Mod4 + p
+
+"subl3"
+    Control+Mod4 + s
+
+"sunflower"
+    Control+Mod4 + t
+
+"sudo xperia-flashtool"
+    Control+Mod4 + x
+
+
+#######################
+###### TERMINALS ######
+#######################
+
+"xfce4-terminal"
+    Mod4 + Return
+
+
+##################
+###### MISC ######
+##################
+
+# Take a screenshot and save it while playing a confirmation sound
+"maim /mnt/Storage/Pictures/Screenshots/PC/$(date +%Y)/$(date +%Y-%m-%d_%H-%M-%S).png && paplay ~/.i3/res/click.ogg"
+    m:0x10 + c:218
+"maim /mnt/Storage/Pictures/Screenshots/PC/$(date +%Y)/$(date +%Y-%m-%d_%H-%M-%S).png && paplay ~/.i3/res/click.ogg"
+    m:0x10 + c:107
+
+# Unmount all volumes
+"udiskie-umount -a"
+    Control+Shift + u
+
+# Reload `xbindkeys` (after editing this file)
+"xbindkeys -p"
+    Control+Shift + x
+
+# Toggle displays (Laptop or HDMI output)
+"~/.i3/scripts/toggle-display.sh"
+    Control+Shift + backslash
+
+# Manually select display and/or fix resolution (such as after a game crash)
+# Doesn't fix the wallpaper like the i3 mode, though (this is intentional)
+#"~/scripts-misc/LVDS1.sh"
+#    ---
+#"~/scripts-misc/HDMI1.sh"
+#    ---

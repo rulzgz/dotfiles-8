@@ -1,0 +1,34 @@
+#
+#  ██████╗  ██████╗ ███████╗██╗
+#  ██╔══██╗██╔═══██╗██╔════╝██║
+#  ██████╔╝██║   ██║█████╗  ██║
+#  ██╔══██╗██║   ██║██╔══╝  ██║
+#  ██║  ██║╚██████╔╝██║     ██║
+#  ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝
+#
+#  KingKobra87's Rofi config
+#  https://www.github.com/kingkobra87/dotfiles
+#
+
+rofi.color-enabled: true
+
+!                  bg       border   separator
+rofi.color-window: #002b36, #859900, #b58900
+
+!                  bg       fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal: #002b36, #839496, #073642, #859900, #fdf6e3
+rofi.color-active: #b58900, #002b36, #cb4b16, #6c71c4, #073642
+rofi.color-urgent: #dc322f, #002b36, #d33682, #268bd2, #073642
+
+rofi.terminal: Xfce4-Terminal
+rofi.location: 0
+rofi.yoffset: 0
+rofi.xoffset: 0
+rofi.font: GohuFont Regular 12
+rofi.bw: 1
+rofi.padding: 10
+rofi.lines: 20
+rofi.width: 25
+rofi.separator-style: solid
+rofi.hide-scrollbar: true
+
