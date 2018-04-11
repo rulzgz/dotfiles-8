@@ -1,0 +1,370 @@
+;
+;  ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;  ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;  ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;  ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;  ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;  ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;  KingKobra87's polybar config
+;  https://www.github.com/kingkobra87/dotfiles
+;
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+
+[settings]
+screenchange-reload = true
+
+
+[colors]
+background = #383838
+foreground = #5f5f5f
+
+dark = #303030
+medium = #404040
+light = #dbdbdb
+
+red = #cc6666
+magenta = #85678f
+violet = #b294bb
+blue = #81a2b3
+cyan = #8abeb7
+green = #b5bd68
+yellow = #f0c674
+orange = #de935f
+
+[bar/kobra]
+font-0 = Wuncon Siji:pixelsize=10;2
+font-1 = Iosevka Kobra:weight=medium:size=10;2
+font-2 = BitstreamVeraSansMono Nerd Font Mono:pixelsize=26;6
+font-3 = xos4 Terminess Powerline:size=28;4
+
+override-redirect = false
+bottom = false
+width = 100%
+height = 26
+offset-x = 0
+offset-y = 0
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+border-bottom-size = 1
+border-bottom-color = ${colors.dark}
+
+spacing = 0
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
+
+modules-left = i3 arrow-right mpd
+modules-center =
+modules-right = pulseaudio XX memory XX cpu XX battery XX date arrow-left
+
+fixed-center = false
+
+line-size = 4
+line-color = ${colors.background}
+
+tray-position = right
+tray-padding = 4
+tray-maxsize = 26
+tray-background = ${colors.medium}
+
+
+[module/i3]
+type = internal/i3
+format = <label-mode><label-state>
+index-sort = true
+enable-click = true
+enable-scroll = true
+wrapping-scroll = false
+
+strip-wsnumbers = true
+
+label-focused = %icon%
+label-focused-foreground = ${colors.green}
+label-focused-background = ${colors.medium}
+label-focused-padding = 1
+
+label-unfocused = %icon%
+label-unfocused-foreground = ${colors.foreground}
+label-unfocused-background = ${colors.medium}
+label-unfocused-padding = 1
+
+label-urgent = %icon%
+label-urgent-foreground = ${colors.red}
+label-urgent-background = ${colors.medium}
+label-urgent-padding = 1
+
+label-visible = %icon%
+label-visible-foreground = ${colors.foreground}
+label-visible-background = ${colors.medium}
+label-visible-padding = 1
+
+ws-icon-0 = 1:Internet;
+ws-icon-1 = 2:Terminal;
+ws-icon-2 = 3:Files;
+ws-icon-3 = 4:Chat;
+ws-icon-4 = 5:Downloads;
+ws-icon-5 = 6:Editing;
+ws-icon-6 = 7:Office;
+ws-icon-7 = 8:System;
+ws-icon-8 = 9:Misc;%{T3}%{T-}
+ws-icon-9 = 10:Editor;
+
+label-mode = %mode% %{R}%{T4}%{T-}
+label-mode-padding = 2
+label-mode-background = ${colors.red}
+label-mode-foreground = ${colors.medium}
+
+
+[module/arrow-right]
+type = custom/text
+content = "%{T4} %{T-}"
+content-foreground = ${colors.medium}
+content-background = ${colors.background}
+
+
+[module/xwindow]
+type = internal/xwindow
+
+format-foreground = ${colors.orange}
+format-padding = 0
+
+label = "%{T2}%title%%{T-}"
+label-maxlen = 80
+
+
+[module/mpd]
+type = internal/mpd
+
+port = 6642
+
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <label-song> <label-time>
+;format-online =  <label-song>
+
+icon-prev-background = ${colors.blue}
+icon-prev-foreground = ${colors.light}
+icon-prev-underline = ${colors.background}
+icon-prev-overline = ${colors.background}
+
+icon-stop-background = ${colors.red}
+icon-stop-foreground = ${colors.light}
+icon-stop-underline = ${colors.background}
+icon-stop-overline = ${colors.background}
+
+icon-play-background = ${colors.green}
+icon-play-foreground = ${colors.light}
+icon-play-underline = ${colors.background}
+icon-play-overline = ${colors.background}
+
+icon-pause-background = ${colors.violet}
+icon-pause-foreground = ${colors.light}
+icon-pause-underline = ${colors.background}
+icon-pause-overline = ${colors.background}
+
+icon-next-background = ${colors.blue}
+icon-next-foreground = ${colors.light}
+icon-next-underline = ${colors.background}
+icon-next-overline = ${colors.background}
+
+label-song = %artist% - %title%
+label-song-maxlen = 125
+label-song-ellipsis = true
+label-song-foreground = ${colors.light}
+
+label-time = (%elapsed%/%total%)
+label-time-foreground = ${colors.foreground}
+
+icon-prev = "  "
+icon-stop = "  "
+icon-play = "  "
+icon-pause = "  "
+icon-next = "  "
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume>
+format-volume-prefix = "  "
+format-volume-background = ${colors.dark}
+format-volume-foreground = ${colors.cyan}
+format-volume-underline = ${colors.background}
+format-volume-overline = ${colors.background}
+
+format-muted-prefix = "  "
+format-muted-background = ${colors.dark}
+format-muted-foreground = ${colors.foreground}
+format-muted-underline = ${colors.background}
+format-muted-overline = ${colors.background}
+
+label-volume = " %percentage%% "
+label-volume-background = ${colors.cyan}
+label-volume-foreground = ${colors.dark}
+label-volume-underline = ${colors.background}
+label-volume-overline = ${colors.background}
+
+label-muted = " Muted "
+label-muted-background = ${colors.foreground}
+label-muted-foreground = ${colors.dark}
+label-muted-underline = ${colors.background}
+label-muted-overline = ${colors.background}
+
+
+[module/memory]
+type = internal/memory
+interval = 1
+
+format-prefix = "  "
+format-prefix-background = ${colors.dark}
+format-prefix-foreground = ${colors.violet}
+format-prefix-underline = ${colors.background}
+format-prefix-overline = ${colors.background}
+
+label = " %percentage_used%% "
+label-foreground = ${colors.dark}
+label-background = ${colors.violet}
+label-underline = ${colors.background}
+label-overline = ${colors.background}
+
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+
+format-prefix = "  "
+format-prefix-background = ${colors.dark}
+format-prefix-foreground = ${colors.orange}
+format-prefix-underline = ${colors.background}
+format-prefix-overline = ${colors.background}
+
+label = " %percentage%% "
+label-foreground = ${colors.dark}
+label-background = ${colors.orange}
+label-underline = ${colors.background}
+label-overline = ${colors.background}
+
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 99
+
+format-full-prefix = "  "
+
+format-charging = <animation-charging><label-charging>
+format-discharging = <ramp-capacity><label-discharging>
+format-full = <label-full>
+
+label-full = " %percentage%% "
+label-charging = " %percentage%% "
+label-discharging = " %percentage%% "
+
+ramp-capacity-0 = "  "
+ramp-capacity-1 = "  "
+ramp-capacity-2 = "  "
+ramp-capacity-3 = "  "
+ramp-capacity-4 = "  "
+ramp-capacity-5 = "  "
+ramp-capacity-6 = "  "
+ramp-capacity-7 = "  "
+ramp-capacity-8 = "  "
+ramp-capacity-9 = "  "
+
+animation-charging-0 = "  "
+animation-charging-1 = "  "
+animation-charging-2 = "  "
+animation-charging-3 = "  "
+animation-charging-4 = "  "
+animation-charging-5 = "  "
+animation-charging-6 = "  "
+animation-charging-7 = "  "
+animation-charging-8 = "  "
+animation-charging-9 = "  "
+animation-charging-10 = "  "
+animation-charging-11 = "  "
+animation-charging-framerate = 350
+
+format-full-prefix-foreground = ${colors.blue}
+format-full-prefix-background = ${colors.dark}
+format-full-prefix-underline = ${colors.background}
+format-full-prefix-overline = ${colors.background}
+
+animation-charging-foreground = ${colors.green}
+animation-charging-background = ${colors.dark}
+animation-charging-underline = ${colors.background}
+animation-charging-overline = ${colors.background}
+
+ramp-capacity-foreground = ${colors.red}
+ramp-capacity-background = ${colors.dark}
+ramp-capacity-underline = ${colors.background}
+ramp-capacity-overline = ${colors.background}
+
+label-full-foreground = ${colors.dark}
+label-full-background = ${colors.blue}
+label-full-underline = ${colors.background}
+label-full-overline = ${colors.background}
+
+label-charging-foreground = ${colors.dark}
+label-charging-background = ${colors.green}
+label-charging-underline = ${colors.background}
+label-charging-overline = ${colors.background}
+
+label-discharging-foreground = ${colors.dark}
+label-discharging-background = ${colors.red}
+label-discharging-underline = ${colors.background}
+label-discharging-overline = ${colors.background}
+
+
+[module/date]
+type = internal/date
+interval = 2
+
+format-prefix = "  "
+format-prefix-background = ${colors.dark}
+format-prefix-foreground = ${colors.magenta}
+format-prefix-underline = ${colors.background}
+format-prefix-overline = ${colors.background}
+
+date = " %I:%M %p "
+date-alt = " %m/%d/%Y @ %I:%M %p "
+label-foreground = ${colors.dark}
+label-background = ${colors.magenta}
+label-underline = ${colors.background}
+label-overline = ${colors.background}
+
+
+[module/arrow-left]
+type = custom/text
+content = "%{T4} %{T-}"
+content-foreground = ${colors.medium}
+content-background = ${colors.background}
+
+
+[module/XX]
+type = custom/text
+content = "  "
+content-foreground = ${colors.background}
+content-background = ${colors.background}
+
+[module/rofi]
+type = custom/script
+
+exec = echo ""
+click-left = echo "" | i3-dmenu-desktop --dmenu="rofi -dmenu -i -hide-scrollbar -location 3 -yoffset 43 -xoffset -16" &
+click-right = echo "" | rofi -show run -hide-scrollbar -location 3 -yoffset 43 -xoffset -16 &
+
+label-background = ${colors.dark}
+label-foreground = ${colors.blue}
+
+label-padding = 1
+
+
+; vim:ft=dosini
